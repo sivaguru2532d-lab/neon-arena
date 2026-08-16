@@ -1,0 +1,14 @@
+export type Quality='low'|'medium'|'high';
+export type PowerType='health'|'shield'|'speed'|'rapid'|'damage'|'burst';
+export type Screen='menu'|'mapselect'|'setup'|'leaderboard'|'profile'|'settings'|'help'|'game'|'result';
+export interface Settings{sound:boolean;music:boolean;shake:boolean;quality:Quality;volume:number}
+export interface Progress{level:number;xp:number;coins:number;wins:number;matches:number;totalKills:number;bestScore:number;bestSurvival:number;bestStreak:number;mapRecords:Record<string,{bestScore:number;bestSurvival:number;wins:number}>}
+export interface HUDState{health:number;shield:number;energy:number;kills:number;score:number;time:number;alive:number;zone:number;zoneWarning:string;power:string;dash:number}
+export interface MatchResult{won:boolean;kills:number;score:number;survival:number;xp:number;coins:number;streak:number}
+export interface InputState{up:boolean;down:boolean;left:boolean;right:boolean;fire:boolean;dash:boolean;mx:number;my:number;pointer:boolean;joyX:number;joyY:number;mobileFire:boolean}
+export interface Actor{id:number;name:string;player:boolean;difficulty:number;x:number;y:number;vx:number;vy:number;angle:number;r:number;hp:number;maxHp:number;shield:number;energy:number;alive:boolean;color:string;kills:number;streak:number;shootCd:number;dashCd:number;dashTime:number;stun:number;speedUntil:number;rapidUntil:number;damageUntil:number;flash:number;think:number;strafe:number;target:number}
+export interface Projectile{x:number;y:number;px:number;py:number;vx:number;vy:number;r:number;damage:number;owner:number;life:number;color:string}
+export interface PowerUp{id:number;x:number;y:number;type:PowerType;pulse:number;life:number}
+export interface Particle{x:number;y:number;vx:number;vy:number;life:number;max:number;size:number;color:string}
+export interface Popup{x:number;y:number;text:string;color:string;life:number}
+export interface Obstacle{x:number;y:number;w:number;h:number}

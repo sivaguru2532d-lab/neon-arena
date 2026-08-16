@@ -1,0 +1,34 @@
+{
+  "name": "neon-arena",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c magenta,cyan \"tsx watch server/index.ts\" \"vite --host 0.0.0.0\"",
+    "server": "tsx server/index.ts",
+    "build": "tsc --noEmit && vite build",
+    "start": "NODE_ENV=production tsx server/index.ts",
+    "test": "tsx tests/neon-test.ts"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.21.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.7.5",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.5",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/ws": "^8.5.13",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "playwright": "^1.62.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5"
+  }
+}

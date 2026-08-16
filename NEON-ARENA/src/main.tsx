@@ -1,0 +1,1 @@
+import React from'react';import{createRoot}from'react-dom/client';import NeonArena from'./neon-arena/NeonArena';import'./styles.css';createRoot(document.getElementById('root')!).render(<React.StrictMode><NeonArena/></React.StrictMode>);
